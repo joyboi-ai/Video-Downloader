@@ -1,73 +1,53 @@
-# YouTube Downloader CLI ✨
+🎥 YouTube Downloader CLI ✨
+A sleek, user-friendly command-line tool built in Python to download YouTube videos and playlists with support for audio language selection, subtitles, and custom video quality.
 
-A simple, yet powerful command-line tool built in Python to download YouTube videos and playlists with audio language and quality selection.
+🚀 Features
+✅ Flexible Downloads: Seamlessly download single videos or entire playlists.✅ Custom Quality: Select from a range of resolutions, from 360p to 4K.✅ Multilingual Audio: Choose your preferred audio language track (when available).✅ Auto-Embedded Subtitles: Automatically includes English (en) and Hindi (hi) subtitles, if available.✅ Progress Tracking: Enjoy a polished live progress bar with detailed download stats.
 
----
+🎬 How It Works
+1. Inspect Video OptionsPaste a YouTube URL, and the tool fetches available audio languages and subtitle options.
+2. Select Language & QualityChoose your preferred audio language and video resolution.
+3. Download with ProgressTrack your download with a dynamic progress bar.
 
-## Features 🚀
+📦 Requirements
 
-* **Download anything:** Grab single videos or entire playlists with ease.
-* **Quality control:** Select your desired video resolution from low (360p) up to crystal-clear 4K.
-* **Multilingual audio:** Choose a preferred audio language track if available.
-* **Smart subtitles:** Automatically embeds English (`en`) and Hindi (`hi`) subtitles, if they exist for the video.
+Python 3.8+  
+yt-dlp – Core library for downloading videos  
+ffmpeg – Essential for merging audio/video and embedding subtitles
 
-## How it Looks 🎬
 
-Here's a glimpse of the tool in action:
+🛠️ Installation
 
-**1. Inspecting Video Languages** (After pasting a video URL, it fetches available audio and subtitle options)
+Clone the Repository  
+git clone https://github.com/joyboi-ai/Video-Downloader.git
+cd Video-Downloader
 
-![App inspecting video languages](./output/1.png)
 
-**2. Language and Quality Selection** (Choosing audio language and video resolution)
+Install Dependencies  
+pip install -U yt-dlp
+sudo apt update && sudo apt install ffmpeg
 
-![App language and quality selection](./output/2.png)
+For non-Linux systems, download ffmpeg from ffmpeg.org/download.
 
-**3. Downloading with Progress** (Visualizing the download progress)
+Make the Script Executable  
+chmod +x main.py
+sudo ln -s "$(pwd)/main.py" /usr/local/bin/ytdl
 
-![App downloading with progress bar](./output/3.png)
+Note: If ytdl isn’t recognized, restart your terminal or run source ~/.bashrc.
 
-## Requirements 📦
 
-* **Python 3.x**: The script is written in Python.
-* [`yt-dlp`](https://github.com/yt-dlp/yt-dlp): The powerful backbone for video downloading.
-* [`ffmpeg`](https://ffmpeg.org/): Essential for merging video and audio streams, and embedding subtitles.
 
----
-
-## Installation 🛠️
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/joyboi-ai/Video-Downloader.git](https://github.com/joyboi-ai/Video-Downloader.git)
-    cd Video-Downloader
-    ```
-
-2.  **Install dependencies:**
-    * **`yt-dlp`**:
-        ```bash
-        pip install -U yt-dlp
-        ```
-    * **`ffmpeg`**:
-        ```bash
-        # On Debian/Ubuntu-based systems (like Pop!_OS)
-        sudo apt update && sudo apt install ffmpeg
-        # For other operating systems, please refer to ffmpeg.org/download.html
-        ```
-
-3.  **Make the script executable and create a global command:**
-    ```bash
-    chmod +x ytdl.py
-    # This creates a symbolic link, allowing you to run 'ytdl' from any directory
-    sudo ln -s "$(pwd)/ytdl.py" /usr/local/bin/ytdl
-    ```
-    **Note:** You might need to open a new terminal or run `source ~/.bashrc` if `ytdl` isn't immediately recognized.
-
----
-
-## Usage 💡
-
-Simply run the command in your terminal:
-
-```bash
+💡 Usage
+Run the tool with:  
 ytdl
+
+You’ll be prompted to:  
+
+Paste a YouTube video or playlist URL.  
+Select your preferred audio language.  
+Choose your desired video quality.  
+Watch the download complete with embedded subtitles and a live progress bar!
+
+
+❤️ Support the Project
+If you love this tool, please give it a ⭐ on GitHub!Your support fuels further improvements and exciting new features.
