@@ -1,53 +1,11 @@
-🎥 YouTube Downloader CLI ✨
-A sleek, user-friendly command-line tool built in Python to download YouTube videos and playlists with support for audio language selection, subtitles, and custom video quality.
-
-🚀 Features
-✅ Flexible Downloads: Seamlessly download single videos or entire playlists.✅ Custom Quality: Select from a range of resolutions, from 360p to 4K.✅ Multilingual Audio: Choose your preferred audio language track (when available).✅ Auto-Embedded Subtitles: Automatically includes English (en) and Hindi (hi) subtitles, if available.✅ Progress Tracking: Enjoy a polished live progress bar with detailed download stats.
-
-🎬 How It Works
-1. Inspect Video OptionsPaste a YouTube URL, and the tool fetches available audio languages and subtitle options.
-2. Select Language & QualityChoose your preferred audio language and video resolution.
-3. Download with ProgressTrack your download with a dynamic progress bar.
-
-📦 Requirements
-
-Python 3.8+  
-yt-dlp – Core library for downloading videos  
-ffmpeg – Essential for merging audio/video and embedding subtitles
-
-
-🛠️ Installation
-
-Clone the Repository  
-git clone https://github.com/joyboi-ai/Video-Downloader.git
+YouTube Downloader CLI ✨A simple, yet powerful command-line tool built in Python to download YouTube videos and playlists with audio language and quality selection.Features 🚀Download anything: Grab single videos or entire playlists with ease.Quality control: Select your desired video resolution from low (360p) up to crystal-clear 4K.Multilingual audio: Choose a preferred audio language track if available.Smart subtitles: Automatically embeds English (en) and Hindi (hi) subtitles, if they exist for the video.How it Looks 🎬Here's a glimpse of the tool in action:1. Inspecting Video Languages(After pasting a video URL, it fetches available audio and subtitle options)2. Language and Quality Selection(Choosing audio language and video resolution)3. Downloading with Progress(Visualizing the download progress)Requirements 📦Python 3.x: The script is written in Python.yt-dlp: The powerful backbone for video downloading.ffmpeg: Essential for merging video and audio streams, and embedding subtitles.Installation 🛠️Clone the repository:git clone [https://github.com/joyboi-ai/Video-Downloader.git](https://github.com/joyboi-ai/Video-Downloader.git)
 cd Video-Downloader
-
-
-Install Dependencies  
-pip install -U yt-dlp
+Install dependencies:yt-dlp:pip install -U yt-dlp
+ffmpeg:# On Debian/Ubuntu-based systems (like Pop!_OS)
 sudo apt update && sudo apt install ffmpeg
-
-For non-Linux systems, download ffmpeg from ffmpeg.org/download.
-
-Make the Script Executable  
-chmod +x main.py
+# For other operating systems, please refer to ffmpeg.org/download.html
+Make the script executable and create a global command:chmod +x main.py
+# This creates a symbolic link, allowing you to run 'ytdl' from any directory
 sudo ln -s "$(pwd)/main.py" /usr/local/bin/ytdl
-
-Note: If ytdl isn’t recognized, restart your terminal or run source ~/.bashrc.
-
-
-
-💡 Usage
-Run the tool with:  
-ytdl
-
-You’ll be prompted to:  
-
-Paste a YouTube video or playlist URL.  
-Select your preferred audio language.  
-Choose your desired video quality.  
-Watch the download complete with embedded subtitles and a live progress bar!
-
-
-❤️ Support the Project
-If you love this tool, please give it a ⭐ on GitHub!Your support fuels further improvements and exciting new features.
+Note: You might need to open a new terminal or run source ~/.bashrc if ytdl isn't immediately recognized.Usage 💡Simply run the command in your terminal:ytdl
+The script will interactively guide you through entering the YouTube URL, selecting your preferred audio language, and choosing the video quality.Star This Repo! ⭐If you find this tool helpful, please consider giving it a star on GitHub! It greatly helps in visibility and motivates further development.License 📄This project is licensed under the MIT License.
